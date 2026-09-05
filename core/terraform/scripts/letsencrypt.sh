@@ -76,7 +76,7 @@ fi
 echo "Requesting certificate for $CERT_FQDN..."
 
 # Initiate the ACME challange
-/opt/certbot/bin/certbot certonly \
+"${CERTBOT_BIN:-/opt/certbot/bin/certbot}" certonly \
     --config-dir "${ledir}" \
     --work-dir "${ledir}" \
     --logs-dir "${ledir}"/logs \
@@ -120,4 +120,3 @@ else
         --cert-file "${CERT_DIR}/aci.pfx" \
         --cert-password "${CERT_PASSWORD}"
 fi
-

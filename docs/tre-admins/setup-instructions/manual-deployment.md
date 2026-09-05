@@ -39,6 +39,12 @@ The Azure TRE instance is initially deployed with an invalid self-signed SSL cer
 make letsencrypt
 ```
 
+If Certbot is installed elsewhere, set `CERTBOT_BIN` to its executable path:
+
+```bash
+CERTBOT_BIN=/path/to/certbot make letsencrypt
+```
+
 !!! caution
     There are rate limits with Let's Encrypt, so this should not be run when not needed.
 
