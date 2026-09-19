@@ -3,11 +3,13 @@
 **BREAKING CHANGES**
 
 ENHANCEMENTS:
+* Add weekly and manual builds for all Dockerfiles and Porter bundle images, with selected pull request builds and checks for failed or missing results. ([#5088](https://github.com/microsoft/AzureTRE/issues/5088))
 * Update case-study documentation by removing an obsolete entry and adding Oxford University Hospitals/TVS SDE and UNC Health SHIRE case studies. ([#5072](https://github.com/microsoft/AzureTRE/pull/5072))
 * Update UI dependencies: `brace-expansion` to 1.1.18, `fast-uri` to 3.1.5, `immutable` to 5.1.9, `js-yaml` to 4.3.1, `nanoid` to 3.3.18, and `postcss` to 8.5.26. ([#5056](https://github.com/microsoft/AzureTRE/pull/5056))
 * Bump `aiohttp` from 3.14.1 to 3.14.3 in `api_app`, `resource_processor`, and `cli`. ([#5045](https://github.com/microsoft/AzureTRE/pull/5045))
 
 BUG FIXES:
+* Defer scheduled CI environment cleanup while other GitHub Actions runs are active or queued, including PR tests started by comments. (`devops` 0.6.5) ([#5087](https://github.com/microsoft/AzureTRE/pull/5087))
 * Pin the API Starlette dependency to 1.6.0 and align the end-to-end test dependency. (`API` 0.26.10) ([#5043](https://github.com/microsoft/AzureTRE/pull/5043))
 * Keep Airlock and user-assignment navigation within the workspace when a child panel is already open. ([#5082](https://github.com/microsoft/AzureTRE/pull/5082))
 * Update React Router to 7.18.4 to address routing security advisories and add navigation regression tests. ([#5081](https://github.com/microsoft/AzureTRE/pull/5081))
